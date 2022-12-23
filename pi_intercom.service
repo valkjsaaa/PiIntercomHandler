@@ -1,0 +1,12 @@
+[Unit]
+Description=Voice Modem Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/python3 /path/to/voice_modem.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
